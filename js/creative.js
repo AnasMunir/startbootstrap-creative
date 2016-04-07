@@ -23,7 +23,7 @@
     })
 
     // Closes the Responsive Menu on Menu Item Click
-    $('.navbar-collapse ul li a:not(.dropdown-toggle)').click(function() {
+    $('.navbar-collapse ul li a').click(function() {
         $('.navbar-toggle:visible').click();
     });
 
@@ -46,3 +46,15 @@
     new WOW().init();
 
 })(jQuery); // End of use strict
+$(function () {
+    $('.chart').easyPieChart({
+        easing: 'easeOutBounce',
+        onStep: function (from, to, percent) {
+            $(this.el).find('.percent').text(Math.round(percent));
+        },
+        barColor: '#f05f40', //FORCOLOR OF CHART
+        lineWidth: 15, //WIDTH OF STRIP OF SKILL CHART
+        size: 200, //WIDTH - HEIGHT OF SKILL CHART(SHOULD BE IN SQUARE) -  SHOUL BE EQUAL - Like 200px
+    });
+
+});
