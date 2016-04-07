@@ -15,8 +15,10 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
 
     <!-- Custom Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <!--<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>-->
+    <!--<link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>-->
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic,900" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
 
     <!-- Plugin CSS -->
@@ -31,6 +33,42 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <style>
+        /* GENERAL STYLES */
+        .pad-bottom {
+            padding-bottom: 40px;
+        }
+
+        /* PIE CHART STYLES */
+        .chart {
+            position: relative;
+            display: inline-block;
+            width: 200px; /* SHOUL BE EQUAL - Like 200px */
+            height: 200px; /* SHOUL BE EQUAL - Like 200px */
+            margin-top: 30px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .chart canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .percent {
+            display: inline-block;
+            line-height: 200px; /* SHOUL BE EQUAL - Like 200px */
+            z-index: 2;
+            font-size: 2em;
+        }
+
+        .percent:after {
+            content: '%';
+            margin-left: 0.1em;
+            font-size: 1em;
+        }
+    </style>
 
 </head>
 
@@ -56,7 +94,7 @@
                         <a class="page-scroll" href="#about">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Services</a>
+                        <a class="page-scroll" href="#services">Skills</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#portfolio">Portfolio</a>
@@ -74,10 +112,11 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1>Your Favorite Source of Free Bootstrap Themes</h1>
+                <h1>Anas Munir</h1>
                 <hr>
-                <p>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just download your template and start going, no strings attached!</p>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+                <h3>Web Developer | anasmunir.github.io</h3>
+                <p>I'm a young Web developer working on open source projects </p>
+                <a href="#about" class="btn btn-primary btn-xl page-scroll">Hire Me</a>
             </div>
         </div>
     </header>
@@ -86,10 +125,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">We've got what you need!</h2>
+                    <h2 class="section-heading">About Me!</h2>
                     <hr class="light">
-                    <p class="text-faded">Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!</p>
-                    <a href="#services" class="page-scroll btn btn-default btn-xl">Get Started!</a>
+                    <p>I'm a newbie web designer & back-end developer with the ambition to conquer the WEB.
+                        I'm interested in all kinds of frameworks and libraries, but my major focus is on PHP with Laravel for my back-end, and AngualrJS for the front-end with some bootstrap HTML and CSS of course.
+                        I can comfortably set up a website from scratch with Bootstrap and customize it with CSS. And now I'm satisfying my appetite for the web with some delicious Javascript. And it comes with so many treats.
+                        As you've noticed, my portfolio is setup on jekyll and hosted on GitHub pages, finally got my own little space in the Web to express my skills and Rantt about stuff <i class="fa fa-smile-o"></i>.
+                        I'll be uploading a few projects that I've started working on soon. In the meanwhile, if you’re looking for a decent front-end developer than look no further. I'm open to working with people who are passionate about their ideas and very much interested to be a part of a startup.
+                    </p>
                 </div>
             </div>
         </div>
@@ -99,42 +142,58 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">At Your Service</h2>
+                    <h2 class="section-heading wow bounceIn text-primary">"A wise man never knows all, only fools know everything."</h2>
+                    <br>
+                    <small>An African proverb</small>
+                    <br>
+                    <small>As an Undergraduate student in my 4th year, I'm still working on my skills by working for Open Source Projects that I'll be posting soon on my portfolio</small>
                     <hr class="primary">
                 </div>
             </div>
         </div>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 text-center">
+            <div class="row text-center">
+                <div class="col-md-3">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-diamond wow bounceIn text-primary"></i>
-                        <h3>Sturdy Templates</h3>
-                        <p class="text-muted">Our templates are updated regularly so they don't break.</p>
+                    <span class="chart" data-percent="5">
+                        <span class="percent"></span>
+                    </span>
+                        <h4>Back-End
+                            <br>
+                            PHP(5.6/7.0), Laravel 5.0
+                        </h4>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-paper-plane wow bounceIn text-primary" data-wow-delay=".1s"></i>
-                        <h3>Ready to Ship</h3>
-                        <p class="text-muted">You can use this theme as is, or you can make changes!</p>
-                    </div>
+                <div class="col-md-3">
+                <span class="chart" data-percent="50">
+                    <span class="percent"></span>
+                </span>
+                    <h4>Front-End
+                        <br>
+                        HTML5, CSS3, Javascript, Bootstrap
+                    </h4>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-newspaper-o wow bounceIn text-primary" data-wow-delay=".2s"></i>
-                        <h3>Up to Date</h3>
-                        <p class="text-muted">We update dependencies to keep things fresh.</p>
-                    </div>
+                <div class="col-md-3">
+                <span class="chart" data-percent="5">
+                    <span class="percent"></span>
+                </span>
+                    <h4>Database
+                        <br>
+                        MySQL, MongoDB
+                    </h4>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-heart wow bounceIn text-primary" data-wow-delay=".3s"></i>
-                        <h3>Made with Love</h3>
-                        <p class="text-muted">You have to make your websites with love these days!</p>
-                    </div>
+                <div class="col-md-3">
+                <span class="chart" data-percent="65">
+                    <span class="percent"></span>
+                </span>
+                    <h4>Other
+                        <br>
+                        JavaCC, LaTex, JAVA
+                    </h4>
                 </div>
+
             </div>
+            <!-- ROW END -->
         </div>
     </section>
 
@@ -235,31 +294,31 @@
         </div>
     </section>
 
-    <aside class="bg-dark">
-        <div class="container text-center">
-            <div class="call-to-action">
-                <h2>Free Download at Start Bootstrap!</h2>
-                <a href="#" class="btn btn-default btn-xl wow tada">Download Now!</a>
-            </div>
-        </div>
-    </aside>
-
     <section id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Let's Get In Touch!</h2>
+                    <h2 class="section-heading">Let's Get In Touch, Hire Me!</h2>
                     <hr class="primary">
-                    <p>Ready to start your next project with us? That's great! Give us a call or send us an email and we will get back to you as soon as possible!</p>
-                </div>
-                <div class="col-lg-4 col-lg-offset-2 text-center">
-                    <i class="fa fa-phone fa-3x wow bounceIn"></i>
-                    <p>123-456-6789</p>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                    <p><a href="mailto:your-email@your-domain.com">feedback@startbootstrap.com</a></p>
-                </div>
+                    <h3>Fork me over at GitHub</h3>
+                    <br>
+                    <ul class="list-inline">
+                        <li>
+                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-facebook fa-3x wow bounceIn"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus fa-3x wow bounceIn"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter fa-3x wow bounceIn"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin fa-3x wow bounceIn"></i></a>
+                        </li>
+                        <li>
+                            <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-github fa-3x wow bounceIn"></i></a>
+                        </li>
+                    </ul>
             </div>
         </div>
     </section>
@@ -274,7 +333,7 @@
     <script src="js/jquery.easing.min.js"></script>
     <script src="js/jquery.fittext.js"></script>
     <script src="js/wow.min.js"></script>
-
+    <script src="js/jquery.easypiechart.min.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
 
